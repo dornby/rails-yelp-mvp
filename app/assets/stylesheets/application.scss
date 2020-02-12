@@ -11,3 +11,43 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  background-color: #F7F7FF;
+  padding-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 2.5%;
+  padding: 1%;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.category {
+  font-style: italic;
+}
+
+.title, .category, .address, .phone_number {
+  margin-bottom: 16px;
+}
+
+.btn-secondary {
+  background-color: #545E75;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: #363d4c;
+}
+
+.btn-secondary > a {
+  color: white;
+}

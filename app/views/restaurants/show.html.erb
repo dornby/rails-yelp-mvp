@@ -1,8 +1,9 @@
+<h1><%= @restaurant.name %></h1>
+<h5><em><%= @restaurant.category.capitalize %></em></h5>
+<br>
 <ul>
-  <li><%= @restaurant.name %></li>
-  <li><%= @restaurant.address %></li>
-  <li><%= @restaurant.category %></li>
-  <li><%= @restaurant.phone_number %></li>
+  <li><%= "Address: #{@restaurant.address}" %></li>
+  <li><%= "Phone: #{@restaurant.phone_number}" %></li>
 </ul>
 
 <ul>
