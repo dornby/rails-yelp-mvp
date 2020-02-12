@@ -5,11 +5,20 @@
   <li><%= "Address: #{@restaurant.address}" %></li>
   <li><%= "Phone: #{@restaurant.phone_number}" %></li>
 </ul>
-
+<br>
+<br>
+<h3>Reviews</h3>
 <ul>
   <% @restaurant.reviews.each do |review| %>
     <li><%= "#{review.rating} | #{review.content}" %></li>
   <% end %>
 </ul>
+<br>
+<h4>Leave a review:</h4>
 
-<%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.button :submit, "Add", class: "btn btn-secondary" %>
+<% end %>
+
